@@ -64,7 +64,7 @@ export const deletePost = async (req, res) => {
   });
 };
 
-export const likePost = async (rqe, res) => {
+export const likePost = async (req, res) => {
   const { id } = req.params;
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
@@ -80,5 +80,5 @@ export const likePost = async (rqe, res) => {
     { new: true }
   );
 
-  res.json(updatePost);
+  res.json(updatedPost);
 };
