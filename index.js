@@ -5,6 +5,7 @@ import cors from "cors";
 import morgan from "morgan";
 import dotenv from 'dotenv'
 import postRoutes from "./routes/Posts.js";
+import userRoutes from './routes/Users.js'
 
 const app = express();
 dotenv.config()
@@ -16,6 +17,8 @@ app.use(morgan("dev"));
 
 // http://localhost:5000/posts
 app.use("/posts", postRoutes);
+// http://localhost:5000/user
+app.use("/user", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
