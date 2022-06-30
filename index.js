@@ -18,7 +18,7 @@ app.use(morgan("dev"));
 // http://localhost:5000/posts
 app.use("/posts", postRoutes);
 // http://localhost:5000/user
-app.use("/user", userRoutes);
+app.use("/users", userRoutes);
 
 const PORT = process.env.PORT || 5000;
 
